@@ -250,6 +250,143 @@ defmodule EthereumJSONRPC.Transaction do
     end
   end
 
+
+  def elixir_to_params(
+    %{
+ #     "blockHash" => block_hash,
+ #     "blockNumber" => block_number,
+      "chainId" => chain_id,
+      "from" => from_address_hash,
+      "gas" => gas,
+     # "gasPrice" => gasPrice,
+      "hash" => hash,
+      "input" => input,
+      "maxPriorityFeePerGas" => max_priority_fee_per_gas,
+      "maxFeePerGas" => max_fee_per_gas,
+      "nonce" => nonce,
+      "r" => r,
+      "s" => s,
+      "to" => to_address_hash,
+      "transactionIndex" => index,
+      "type" => type,
+      "value" => value
+    }  = transaction
+  ) do
+      result = %{
+	block_hash: nil,
+	block_number: nil,
+	from_address_hash: from_address_hash,
+	gas: gas,
+	hash: hash,
+	index: index,
+	input: input,
+	nonce: nonce,
+	r: r,
+	s: s,
+	to_address_hash: to_address_hash,
+	value: value,
+	transaction_index: index,
+	type: type,
+	max_priority_fee_per_gas: max_priority_fee_per_gas,
+	max_fee_per_gas: max_fee_per_gas
+      }
+
+    if transaction["creates"] do
+      Map.put(result, :created_contract_address_hash, transaction["creates"])
+    else
+      result
+    end
+  end
+
+  def elixir_to_params(
+    %{
+      "blockHash" => block_hash,
+      "blockNumber" => block_number,
+      "chainId" => chain_id,
+      "from" => from_address_hash,
+      "gas" => gas,
+      "gasPrice" => gasPrice,
+      "hash" => hash,
+      "input" => input,
+      "maxPriorityFeePerGas" => max_priority_fee_per_gas,
+      "maxFeePerGas" => max_fee_per_gas,
+      "nonce" => nonce,
+      "r" => r,
+      "s" => s,
+      "to" => to_address_hash,
+      "transactionIndex" => index,
+      "type" => type,
+      "value" => value
+    }  = transaction
+  ) do
+      result = %{
+	block_hash: block_hash,
+	block_number: block_number,
+	from_address_hash: from_address_hash,
+	gas: gas,
+	hash: hash,
+	index: index,
+	input: input,
+	nonce: nonce,
+	r: r,
+	s: s,
+	to_address_hash: to_address_hash,
+	value: value,
+	transaction_index: index,
+	type: type,
+	max_priority_fee_per_gas: max_priority_fee_per_gas,
+	max_fee_per_gas: max_fee_per_gas
+      }
+
+    if transaction["creates"] do
+      Map.put(result, :created_contract_address_hash, transaction["creates"])
+    else
+      result
+    end
+  end
+
+    def elixir_to_params(
+    %{
+      "type" => type,
+      "nonce" => nonce,
+      "hash" => hash,
+      "from" => from_address_hash,
+      "gas" => gas,
+      "value" => value,
+      "input" => input,
+      "maxPriorityFeePerGas" => max_priority_fee_per_gas,
+      "maxFeePerGas" => max_fee_per_gas,
+      "chainId" => chain_id,
+      "r" => r,
+      "s" => s,
+      "transactionIndex" => index
+    }  = transaction
+  ) do
+    result = %{
+        from_address_hash: from_address_hash,
+	gas: gas,
+	hash: hash,
+	index: index,
+	input: input,
+	nonce: nonce,
+	r: r,
+	s: s,
+	value: value,
+	transaction_index: index,
+	type: type,
+	max_priority_fee_per_gas: max_priority_fee_per_gas,
+	max_fee_per_gas: max_fee_per_gas
+      }
+
+    if transaction["creates"] do
+      Map.put(result, :created_contract_address_hash, transaction["creates"])
+    else
+      result
+    end
+  end
+
+
+
   @doc """
   Extracts `t:EthereumJSONRPC.hash/0` from transaction `params`
 

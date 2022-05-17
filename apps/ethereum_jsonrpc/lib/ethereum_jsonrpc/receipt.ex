@@ -140,6 +140,26 @@ defmodule EthereumJSONRPC.Receipt do
     }
   end
 
+  def elixir_to_params(
+    %{
+      "cumulativeGasUsed" => cumulative_gas_used,
+      "gasUsed" => gas_used,
+      "contractAddress" => created_contract_address_hash,
+      "status" => status,
+      "transactionHash" => transaction_hash,
+      "transactionIndex" => transaction_index
+    }
+  ) do
+   %{
+      cumulative_gas_used: cumulative_gas_used,
+      gas_used: gas_used,
+      created_contract_address_hash: created_contract_address_hash,
+      status: status,
+      transaction_hash: transaction_hash,
+      transaction_index: transaction_index
+   }
+   end
+
   @doc """
   Decodes the stringly typed numerical fields to `t:non_neg_integer/0`.
 
