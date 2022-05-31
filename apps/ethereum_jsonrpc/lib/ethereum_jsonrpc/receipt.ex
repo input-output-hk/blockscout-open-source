@@ -140,16 +140,15 @@ defmodule EthereumJSONRPC.Receipt do
     }
   end
 
-  def elixir_to_params(
-    %{
-      "cumulativeGasUsed" => cumulative_gas_used,
+  def elixir_to_params(map) do
+    %{"cumulativeGasUsed" => cumulative_gas_used,
       "gasUsed" => gas_used,
       "contractAddress" => created_contract_address_hash,
       "status" => status,
       "transactionHash" => transaction_hash,
       "transactionIndex" => transaction_index
-    }
-  ) do
+     } = Map.merge(map, %{"contractAddress" => nil})
+  
    %{
       cumulative_gas_used: cumulative_gas_used,
       gas_used: gas_used,

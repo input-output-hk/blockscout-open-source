@@ -452,7 +452,11 @@ defmodule EthereumJSONRPC.Block do
 
   """
   @spec elixir_to_transactions(elixir) :: Transactions.elixir()
-  def elixir_to_transactions(%{"transactions" => transactions}), do: transactions
+  def elixir_to_transactions(%{
+    "number" => number,
+    "hash" => hash,
+    "transactions" => transactions
+  }), do: transactions |> Enum.map(fn tx -> Map.merge(tx, %{"blockNumber" => number, "blockHash" => hash}) end)
 
   def elixir_to_transactions(_), do: []
 
