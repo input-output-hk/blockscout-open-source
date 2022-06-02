@@ -571,8 +571,9 @@ defmodule EthereumJSONRPC.Block do
       }
 
   """
-  def to_elixir(block) when is_map(block) do
-    Enum.into(block, %{}, &entry_to_elixir/1)
+  def to_elixir(%{"transactions" => transactions, "number" => number, "hash" => hash} = block) when is_map(block) do
+    updated_transactions = transactions |> Enum.map(fn tx -> Map.merge(tx, %{"blockNumber" => number, "blockHash" => hash}) end)
+    Enum.into(%{block | "transactions" => updated_transactions}, %{}, &entry_to_elixir/1)
   end
 
   defp entry_to_elixir({key, quantity})
