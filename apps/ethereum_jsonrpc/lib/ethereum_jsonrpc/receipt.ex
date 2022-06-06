@@ -147,16 +147,15 @@ defmodule EthereumJSONRPC.Receipt do
       "status" => status,
       "transactionHash" => transaction_hash,
       "transactionIndex" => transaction_index
-     } = Map.merge(map, %{"contractAddress" => nil})
-  
-   %{
+    } = Map.merge(map, %{"contractAddress" => nil})
+    %{
       cumulative_gas_used: cumulative_gas_used,
       gas_used: gas_used,
       created_contract_address_hash: created_contract_address_hash,
       status: status,
       transaction_hash: transaction_hash,
       transaction_index: transaction_index
-   }
+    }
    end
 
   @doc """

@@ -250,7 +250,7 @@ defmodule EthereumJSONRPC.Transaction do
     end
   end
 
-
+"""
   def elixir_to_params(
     %{
       "blockHash" => block_hash,
@@ -394,7 +394,7 @@ defmodule EthereumJSONRPC.Transaction do
       result
     end
   end
-
+"""
 
 
   @doc """
