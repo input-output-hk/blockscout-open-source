@@ -373,7 +373,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/block_scout_web/templates/block/overview.html.eex:53
-msgid "Block Height"
+msgid "Block Number"
 msgstr ""
 
 #, elixir-format

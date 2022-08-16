@@ -50,7 +50,7 @@
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("The block height of a particular block is defined as the number of blocks preceding it in the blockchain.") %>
               <%= if block_type(@block) == "Block" do %>
-                <%= gettext("Block Height") %>
+                <%= gettext("Block Number") %>
               <% else %>
                 <%= gettext("%{block_type} Height", block_type: block_type(@block)) %>
               <% end %>
