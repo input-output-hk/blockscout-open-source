@@ -31,7 +31,7 @@ $dashboard-banner-gradient-end: lighten($dark2, 5); // gradient end
 $dashboard-banner-network-plain-container-background-color: $dark2; // stats bg
 // body
 $body-bg: #000;
-$body-color: #444;
+$body-color: #A6A6A6;
 
 
 // navbar
@@ -50,7 +50,7 @@ $header-icon-color-hover: $primary;
 $header-icon-border-color-hover: $primary;
 
 // buttons
-$btn-line-bg: $secondary; // button bg
+$btn-line-bg: #606060; // button bg
 $btn-line-color: $primary; // button border and font color && hover bg color
 $btn-copy-color: $primary; // btn copy
 $btn-qr-color: $primary; // btn qr-code
@@ -64,19 +64,15 @@ $tile-type-progress-bar-color: $primary;
 a.tile-title { color: $primary !important; }
 
 // card
-$card-background-1: $tertiary;
+$card-background-1: #323232;
 $card-tab-active: #606060;
 
 .layout-container {
 	.dashboard-banner-container {
-	  background-image: linear-gradient(
-	    to bottom,
-	    $dashboard-banner-gradient-start,
-	    $dashboard-banner-gradient-end
-	  );
+	  background-color: $dark2;
 	}
 	main {
-		background-color: #2a2a2a !important;
+		background-color: $dark2 !important;
 	}
 }
 

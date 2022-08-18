@@ -1,9 +1,9 @@
-$card-background-color: $tertiary  !default;
+$card-background-color: #3C3C3C !default;
 $card-tab-active: #606060 !default;
 $card-default-border-radius: 10px !default;
 $card-horizontal-padding: 30px;
 $card-vertical-padding: 30px;
-$card-background-1: $tertiary !default;
+$card-background-1: #fff !default;
 $card-background-1-text-color: #fff !default;
 $card-tab-icon-color: $secondary !default;
 $card-tab-icon-color-active: $secondary !default;
@@ -12,7 +12,6 @@ $card-tab-icon-color-active: $secondary !default;
   background-color: $card-background-color;
   border-radius: $card-default-border-radius;
   border: none;
-  box-shadow: 0 0 30px 0 rgba(202, 199, 226, 0.5);
   margin-bottom: $common-container-margin;
 
   .block-details-row {
@@ -55,7 +54,7 @@ $card-tab-icon-color-active: $secondary !default;
   font-weight: normal;
   line-height: 1.2rem;
   margin-bottom: 2rem;
-  color: $secondary;
+  color: $primary;
 
   &.lg-card-title {
     @media (max-width: 374px) {
@@ -156,6 +155,8 @@ $card-tab-icon-color-active: $secondary !default;
 
 .card-body {
   padding: $card-horizontal-padding;
+  background-color: #323232;
+  border-radius: 0.25rem;
 }
 
 .card-body-flex-column-space-between {
@@ -205,7 +206,7 @@ $card-tab-icon-color-active: $secondary !default;
 .card-tab {
   align-items: center;
   background-color: $card-background-color;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   display: flex;
   font-size: 14px;
@@ -217,7 +218,7 @@ $card-tab-icon-color-active: $secondary !default;
 
   &:hover {
     background-color: rgba($card-tab-active, .15);
-    color: $card-tab-active;
+    color: #fff;
     text-decoration: none;
   }
 

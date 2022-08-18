@@ -14,12 +14,12 @@ $tile-type-progress-bar-color: $primary !default;
 $tile-status-error-reason: #ff7986 !default;
 $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
-$tile-title-color: #333 !default;
-$tile-body-a-color: #29CF4D !default;
+$tile-title-color: #fff !default;
+$tile-body-a-color: magenta !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
-    border-left: 4px solid $color;
+    // border-left: 4px solid $color;
 
     .tile-transaction-type-block {
       a {
@@ -32,11 +32,7 @@ $tile-body-a-color: #29CF4D !default;
     }
 
     .tile-label {
-      @if ($label-color) {
-        color: $label-color;
-      } @else {
-        color: $color;
-      }
+      color: #fff;
     }
 
     .tile-status-label {
@@ -44,11 +40,12 @@ $tile-body-a-color: #29CF4D !default;
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
-      color: $color;
+      background-color: #3C3C3C;
+      // border-bottom: 1px solid $color;
+      // border-right: 1px solid $color;
+      // border-top: 1px solid $color;
+      color: #fff;
+      border-radius: 7px 0 0 7px !important;
     }
   }
 }
@@ -56,6 +53,7 @@ $tile-body-a-color: #29CF4D !default;
 /*********************************************************************/
 
 .tile-label {
+  color: #fff;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
@@ -117,7 +115,8 @@ $tile-body-a-color: #29CF4D !default;
 }
 
 .tile-bottom-contents {
-  background-color: #f6f7f9;
+  background-color: #3C3C3C;
+  color: #fff;
   font-size: 12px;
   line-height: 1.2;
   padding: 0.8rem 1rem;
@@ -142,17 +141,8 @@ $tile-body-a-color: #29CF4D !default;
 
 .tile-muted {
   background-color: $gray-100;
-  border-left: 1px solid $border-color;
+  // border-left: 1px solid $border-color;
   box-shadow: none;
-}
-
-.tile-code {
-  border-radius: 4px;
-  border: 1px solid $border-color;
-  flex-grow: 1;
-  font-size: 12px;
-  line-height: 1.4rem;
-  padding: $tile-padding;
 }
 
 .tile-function-response {
@@ -176,6 +166,7 @@ $tile-body-a-color: #29CF4D !default;
 }
 
 .tile {
+  background-color: #3C3C3C;
   span[data-address-hash] {
     color: $tile-body-a-color;
   }
@@ -209,7 +200,7 @@ $tile-body-a-color: #29CF4D !default;
     }
   }
   border-radius: 4px;
-  border: 1px solid $border-color;
+  // border: 1px solid $border-color;
   color: $text-muted;
   flex-grow: 1;
   font-size: 12px;
@@ -302,7 +293,7 @@ $tile-body-a-color: #29CF4D !default;
   }
 
   &.tile-type-token {
-    border: 1px solid $border-color;
+    // border: 1px solid $border-color;
   }
 
   &.tile-type-token-transfer {
@@ -445,9 +436,9 @@ $tile-body-a-color: #29CF4D !default;
     border-radius: 4px;
     overflow: hidden;
     transition: .24s ease-out;
-    border-top: 1px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
-    border-bottom: 1px solid #dee2e6;
+    // border-top: 1px solid #dee2e6;
+    // border-right: 1px solid #dee2e6;
+    // border-bottom: 1px solid #dee2e6;
     pointer-events: none;
     .tile-type-line-up {
       position: absolute;
