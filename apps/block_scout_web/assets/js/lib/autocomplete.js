@@ -53,7 +53,8 @@ export const searchEngine = (query, record) => {
       (record.symbol && record.symbol.toLowerCase().includes(queryLowerCase)) ||
       (record.address_hash && record.address_hash.toLowerCase().includes(queryLowerCase)) ||
       (record.tx_hash && record.tx_hash.toLowerCase().includes(queryLowerCase)) ||
-      (record.block_hash && record.block_hash.toLowerCase().includes(queryLowerCase))
+      (record.block_hash && record.block_hash.toLowerCase().includes(queryLowerCase)) ||
+      (record.block_number && record.block_number.toLowerCase().includes(queryLowerCase))
   )
   ) {
     let searchResult = '<div>'

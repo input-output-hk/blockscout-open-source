@@ -1,7 +1,7 @@
 // Default variables
 $header-background-color: $tertiary !default;
-$header-links-color: #828ba0 !default;
-$header-links-color-active: #333 !default;
+$header-links-color: #fff !default;
+$header-links-color-active: $secondary !default;
 $header-icon-color: $header-links-color !default;
 $header-icon-color-hover: $secondary !default;
 $header-icon-border-color-hover: $secondary !default;
