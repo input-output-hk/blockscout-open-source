@@ -54,11 +54,11 @@ export const searchEngine = (query, record) => {
       (record.address_hash && record.address_hash.toLowerCase().includes(queryLowerCase)) ||
       (record.tx_hash && record.tx_hash.toLowerCase().includes(queryLowerCase)) ||
       (record.block_hash && record.block_hash.toLowerCase().includes(queryLowerCase)) ||
-      (record.block_number && record.block_number.toLowerCase().includes(queryLowerCase))
+      (record.block_number && record.block_number.toString().includes(queryLowerCase))
   )
   ) {
     let searchResult = '<div>'
-    searchResult += `<div>${record.address_hash || record.tx_hash || record.block_hash}</div>`
+    searchResult += `<div>${record.address_hash || record.tx_hash || (record.block_number + ": " + record.block_hash)}</div>`
 
     if (record.type === 'label') {
       searchResult += `<div class="fontawesome-icon tag"></div><span> <b>${record.name}</b></span>`
