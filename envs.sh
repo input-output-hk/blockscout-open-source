@@ -6,3 +6,4 @@ export INDEXER_DISABLE_ADDRESS_COIN_BALANCE_FETCHER=false
 export LOGO=/images/iohk-logo.png
 export LOGO_FOOTER=/images/iohk-logo.png
 export SUBNETWORK=Mamba
+export SUPPORTED_CHAINS='[]'

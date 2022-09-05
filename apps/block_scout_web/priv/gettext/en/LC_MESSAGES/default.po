@@ -1757,7 +1757,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_search.html.eex:3
 #, elixir-autogen, elixir-format
-msgid "Search by address, token symbol name, transaction hash, block number or block hash"
+msgid "Search by address, token symbol name, transaction hash, block number or hash"
 msgstr ""
 
 #: lib/block_scout_web/templates/address_token_balance/_token_balances.html.eex:47
