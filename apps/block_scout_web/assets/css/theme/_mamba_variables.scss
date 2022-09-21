@@ -1,8 +1,8 @@
 // general
-$primary: #FFFFFF;
+$primary: #E6E6E6;
 $secondary: #f00;
 $tertiary: #2d2d2d;
-$additional-font: #fff;
+$additional-font: #E6E6E6;
 
 $dark2: #181818;
 $dark3: #323232;
@@ -17,10 +17,10 @@ $footer-item-disc-color: $secondary;
 // dashboard
 $dashboard-line-color-price: $tertiary; // price left border
 
-$dashboard-banner-chart-legend-label-color: #dcc8ff;
+$dashboard-banner-chart-legend-label-color: #a3a9b5;
 $dashboard-stats-item-label-color: $dashboard-banner-chart-legend-label-color;
-$dashboard-banner-chart-legend-value-color: #fff; // chart labels
-$dashboard-stats-item-value-color: #fff; // stat values
+$dashboard-banner-chart-legend-value-color: #E6E6E6; // chart labels
+$dashboard-stats-item-value-color: #E6E6E6; // stat values
 
 $dashboard-stats-item-border-color: $secondary; // stat border
 
@@ -91,7 +91,7 @@ $api-text-monospace-color: $primary;
 
 // Dark theme
 $dark-primary: #000;
-$dark-secondary: #f00;
+-secondary: #f00;
 $dark-primary-alternate: #2d2d2d; 
 
 .dark-mode-changer {

@@ -7,3 +7,9 @@ $alert-danger-color: #ff7986 !default;
     border-color: $alert-danger-border-color;
     color: $alert-danger-color;
 }
+
+.alert-warning {
+    background-color: #181818;
+    border-color: #181818;
+    color: #a3a9b5;
+}

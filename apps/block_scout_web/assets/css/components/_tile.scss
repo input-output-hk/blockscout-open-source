@@ -41,9 +41,9 @@ $tile-body-a-color: magenta !default;
 
     .tile-transaction-type-block {
       background-color: #3C3C3C;
-      // border-bottom: 1px solid $color;
-      // border-right: 1px solid $color;
-      // border-top: 1px solid $color;
+      border-bottom: 1px solid $color;
+      border-right: 1px solid $color;
+      border-top: 1px solid $color;
       color: #fff;
       border-radius: 7px 0 0 7px !important;
     }
@@ -140,11 +140,22 @@ $tile-body-a-color: magenta !default;
 }
 
 .tile-muted {
-  background-color: $gray-100;
+  background-color: #606060;
+  border-color: #606060;
   // border-left: 1px solid $border-color;
   box-shadow: none;
+  pre {
+    color: #aaa;
+  }
+  .alert-info {
+    background-color: #606060;
+    border-color: #606060;
+    color: #aaa;
+  }
 }
-
+.text-dark { 
+  color: #aaa !important; 
+}
 .tile-function-response {
   span.function-response-item {
     display: block;
