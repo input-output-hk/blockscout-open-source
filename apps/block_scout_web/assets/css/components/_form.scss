@@ -1,13 +1,15 @@
-$form-control-border-color: #e2e5ec !default;
+$form-control-border-color: #3C3C3C !default;
 $form-control-border-color-active: $primary !default;
 
 .form-control {
   border-color: $form-control-border-color;
-  border-radius: 0;
+  background-color: #323232 !important;
+  color: #919191 !important;
+  border-radius: 7px !important;
   font-size: 14px;
 
   &.border-rounded {
-    border-radius: 4px;
+    border-radius: 7px;
   }
 
   &:focus {
@@ -39,7 +41,7 @@ $form-control-border-color-active: $primary !default;
   }
 
   .text-dark {
-    color: #333;
+    color: #fff !important;
   }
 
   &.m-b-0 {

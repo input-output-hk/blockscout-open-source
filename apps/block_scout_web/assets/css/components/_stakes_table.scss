@@ -1,4 +1,4 @@
-$stakes-table-th-background: #f5f6fa !default;
+$stakes-table-th-background: #323232 !default;
 $stakes-table-cell-separation: 25px !default;
 $stakes-link-color: $primary !default;
 
@@ -6,6 +6,10 @@ $stakes-link-color: $primary !default;
   max-width: 100%;
   overflow-x: auto;
   width: 100%;
+  tr {
+    background-color: #323232 !important;
+    color: #A6A6A6 !important;
+  }
 }
 
 .addresses-table-container {
@@ -23,7 +27,7 @@ $stakes-link-color: $primary !default;
     }
   }
   .color-lighten {
-    color: #828ba0;
+    color: #e6e6e6;
   }
 }
 
@@ -118,6 +122,8 @@ $stakes-link-color: $primary !default;
 }
 
 .stakes-table-th-content {
+  background-color: #323232 !important;
+  color: #A6A6A6 !important;
   align-items: center;
   display: flex;
   justify-content: flex-start;
@@ -138,7 +144,7 @@ $stakes-link-color: $primary !default;
 }
 
 .stakes-td {
-  border-bottom: 1px solid #f5f6fa;
+  border-bottom: 1px solid #d1d1d16c ;
   font-size: 14px;
   font-weight: normal;
   height: 60px;

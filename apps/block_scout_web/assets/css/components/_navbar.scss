@@ -1,13 +1,13 @@
 // Default variables
-$header-background-color: #fff !default;
-$header-links-color: #828ba0 !default;
-$header-links-color-active: #333 !default;
+$header-background-color: $tertiary !default;
+$header-links-color: #fff !default;
+$header-links-color-active: #909090!default;
 $header-icon-color: $header-links-color !default;
-$header-icon-color-hover: $secondary !default;
-$header-icon-border-color-hover: $secondary !default;
+$header-icon-color-hover: #909090 !default;
+$header-icon-border-color-hover: #909090 !default;
 $header-toggler-icon: "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{transparentize($primary, 0.5)}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E" !default;
 $header-textfield-text-color: $header-links-color !default;
-$header-textfield-background-color: #f5f6fa !default;
+$header-textfield-background-color: $tertiary !default;
 $header-textfield-magnifier-color: $header-links-color !default;
 $header-link-horizontal-padding: 0.71rem;
 $navbar-logo-height: 28px !default;
@@ -201,9 +201,7 @@ $navbar-logo-width: auto !default;
     width: 100%;
 
     &.border {
-      border-color: $secondary !important;
       border-radius: 5px;
-      color: $secondary;
       background-color: $header-textfield-background-color;
     }
   }
@@ -236,6 +234,7 @@ $navbar-logo-width: auto !default;
   margin-left: 0;
   flex-shrink: 1;
   display: inline-flex;
+  color: #fff;
   .navbar-logo {
     max-width: 100%;
   }
@@ -247,11 +246,12 @@ $navbar-logo-width: auto !default;
 }
 
 .logo-text {
-  color: #333;
+  color: #fff;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-left: 5px;
   line-height: 28px;
+  font-family: 'Electrolize', sans-serif;
 
   &.in-footer {
     color: #fff;

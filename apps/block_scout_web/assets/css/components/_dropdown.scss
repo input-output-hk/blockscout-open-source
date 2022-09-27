@@ -1,13 +1,11 @@
-$dropdown-menu-item-color: #333 !default;
-$dropdown-menu-item-hover-color: $secondary !default;
-$dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
+$dropdown-menu-item-color: #000 !default;
+$dropdown-menu-item-hover-color: #fff !default;
+$dropdown-menu-item-hover-background: #3C3C3C!default;
 
 // These styles extend the default Bootstrap styles
 .dropdown-menu {
   border-bottom: 1px solid #e2e5ec;
-  border-left: 1px solid #e2e5ec;
   border-radius: 0 0 2px 2px !important;
-  border-right: 1px solid #e2e5ec;
   border-top: none;
   box-shadow: $box-shadow;
   padding: 0;
@@ -36,18 +34,18 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
 }
 
 .dropdown-item {
-  color: $dropdown-menu-item-color;
+  background-color: #606060;
+  color: #fff;
   font-size: 12px;
   padding: 10px 20px;
   transition: $transition-cont;
-  white-space: initial;
 
   & {
     &.active,
     &:hover,
     &:focus {
-      background-color: $dropdown-menu-item-hover-background;
-      color: $dropdown-menu-item-hover-color;
+      background-color: #3C3C3C;
+      color: #F6F7F9;
 
       .external-link-icon {
         path {
@@ -72,9 +70,9 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
     &:hover,
     &:active {
       padding-left: 10px;
-      background-color: #fff !important;
+      background-color: #323232 !important;
       cursor: default;
-      color: #333;
+      color: #fff;
       font-weight: 700;
     }
   }
