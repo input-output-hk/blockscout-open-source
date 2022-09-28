@@ -40,20 +40,11 @@ $tile-body-a-color: magenta !default;
     }
 
     .tile-transaction-type-block {
-<<<<<<< HEAD
       background-color: rgba($color, 0.1);
       // border-bottom: 1px solid $color;
       // border-right: 1px solid $color;
       // border-top: 1px solid $color;
       color: $color;
-=======
-      background-color: #3C3C3C;
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
-      color: #fff;
-      border-radius: 7px 0 0 7px !important;
->>>>>>> master
     }
   }
 }
@@ -123,12 +114,7 @@ $tile-body-a-color: magenta !default;
 }
 
 .tile-bottom-contents {
-<<<<<<< HEAD
   background-color: #3c3c3c;
-=======
-  background-color: #3C3C3C;
-  color: #fff;
->>>>>>> master
   font-size: 12px;
   line-height: 1.2;
   padding: 0.8rem 1rem;
@@ -152,26 +138,15 @@ $tile-body-a-color: magenta !default;
 }
 
 .tile-muted {
-<<<<<<< HEAD
   background-color: #323232;
   border-color: #323232;
-=======
-  background-color: #606060;
-  border-color: #606060;
-  // border-left: 1px solid $border-color;
->>>>>>> master
   box-shadow: none;
   pre {
     color: #aaa;
   }
   .alert-info {
-<<<<<<< HEAD
     background-color: #323232;
     border-color: #323232;
-=======
-    background-color: #606060;
-    border-color: #606060;
->>>>>>> master
     color: #aaa;
   }
 }
@@ -326,9 +301,9 @@ $tile-body-a-color: magenta !default;
     }
   }
 
-  &.tile-type-token {
-    // border: 1px solid $border-color;
-  }
+  // &.tile-type-token {
+  //   // border: 1px solid $border-color;
+  // }
 
   &.tile-type-token-transfer {
     &-short-name {
