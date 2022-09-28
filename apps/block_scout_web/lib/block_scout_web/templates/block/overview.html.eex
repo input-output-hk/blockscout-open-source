@@ -50,7 +50,7 @@
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("The block height of a particular block is defined as the number of blocks preceding it in the blockchain.") %>
               <%= if block_type(@block) == "Block" do %>
-                <%= gettext("Block Height") %>
+                <%= gettext("Block Number") %>
               <% else %>
                 <%= gettext("%{block_type} Height", block_type: block_type(@block)) %>
               <% end %>
@@ -95,7 +95,7 @@
               <dt class="col-sm-3 col-lg-2 text-muted">
                 <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                 text: gettext("A block producer who successfully included the block onto the blockchain.") %>
-                <%= gettext("Miner") %>
+                <%= gettext("Validator") %>
               </dt>
               <dd class="col-sm-9 col-lg-10"><%= render BlockScoutWeb.AddressView, "_link.html", address: @block.miner, contract: false, class: "", use_custom_tooltip: false, show_full_hash: true %>
                 <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
@@ -113,7 +113,7 @@
               text: gettext("Size of the block in bytes.") %>
               <%= gettext("Size") %>
             </dt>
-            <dd class="col-sm-9 col-lg-10"><%= if !is_nil(@block.size), do: (Cldr.Unit.new(:byte, @block.size) |> cldr_unit_to_string!()), else: gettext("N/A bytes") %></dd>
+            <dd class="col-sm-9 col-lg-10"><%= if !is_nil(@block.size), do: (Cldr.Unit.new!(:byte, @block.size) |> cldr_unit_to_string!()), else: gettext("N/A bytes") %></dd>
           </dl>
           <!-- Hash -->
           <dl class="row">
@@ -177,7 +177,7 @@
                 text: gettext("The total gas amount used in the block and its percentage of gas filled in the block.") %>
                 <%= gettext("Gas Used") %>
               </dt>
-              <dd class="col-sm-9 col-lg-10"><%= @block.gas_used |> BlockScoutWeb.Cldr.Number.to_string! %> | <%= if Decimal.cmp(@block.gas_limit, 0) == :eq, do: "0%", else: ((Decimal.to_integer(@block.gas_used) / Decimal.to_integer(@block.gas_limit)) |> BlockScoutWeb.Cldr.Number.to_string!(format: "#.#%")) %></dd>
+              <dd class="col-sm-9 col-lg-10"><%= @block.gas_used |> BlockScoutWeb.Cldr.Number.to_string! %> | <%= if Decimal.compare(@block.gas_limit, 0) == :eq, do: "0%", else: ((Decimal.to_integer(@block.gas_used) / Decimal.to_integer(@block.gas_limit)) |> BlockScoutWeb.Cldr.Number.to_string!(format: "#.#%")) %></dd>
             </dl>
             <!-- Gas Limit -->
             <dl class="row">
