@@ -46,7 +46,7 @@
         role="button"
       ><%= gettext "Try it out" %></button>
       <button
-        class="collapse btn-line float-right"
+        class="collapse btn-full-primary float-right"
         data-action="<%= @action %>"
         data-module="eth"
         data-selector='<%= "eth-#{@action}-btn-try-api-cancel" %>'

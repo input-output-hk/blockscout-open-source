@@ -11,7 +11,7 @@ $tile-type-unique-token-image-color: $orange !default;
 $tile-type-internal-transaction-color: $teal !default;
 $tile-type-api-documentation-color: $primary !default;
 $tile-type-progress-bar-color: $primary !default;
-$tile-status-error-reason: #ff7986 !default;
+$tile-status-error-reason: #b13f3f !default;
 $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
 $tile-title-color: #fff !default;
@@ -40,12 +40,11 @@ $tile-body-a-color: magenta !default;
     }
 
     .tile-transaction-type-block {
-      background-color: #3C3C3C;
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
-      color: #fff;
-      border-radius: 7px 0 0 7px !important;
+      background-color: rgba($color, 0.1);
+      // border-bottom: 1px solid $color;
+      // border-right: 1px solid $color;
+      // border-top: 1px solid $color;
+      color: $color;
     }
   }
 }
@@ -115,8 +114,7 @@ $tile-body-a-color: magenta !default;
 }
 
 .tile-bottom-contents {
-  background-color: #3C3C3C;
-  color: #fff;
+  background-color: #3c3c3c;
   font-size: 12px;
   line-height: 1.2;
   padding: 0.8rem 1rem;
@@ -140,16 +138,15 @@ $tile-body-a-color: magenta !default;
 }
 
 .tile-muted {
-  background-color: #606060;
-  border-color: #606060;
-  // border-left: 1px solid $border-color;
+  background-color: #323232;
+  border-color: #323232;
   box-shadow: none;
   pre {
     color: #aaa;
   }
   .alert-info {
-    background-color: #606060;
-    border-color: #606060;
+    background-color: #323232;
+    border-color: #323232;
     color: #aaa;
   }
 }
@@ -198,7 +195,7 @@ $tile-body-a-color: magenta !default;
   }
 
   .tile-title {
-    color: $tile-title-color;
+    color: #a3a3a3;
     font-size: 12px;
 
     &-hash {
@@ -289,6 +286,7 @@ $tile-body-a-color: magenta !default;
   &.tile-type-block {
     max-width: 100%;
     .tile-title {
+      color: #a3a3a3;
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 12px;
@@ -303,9 +301,9 @@ $tile-body-a-color: magenta !default;
     }
   }
 
-  &.tile-type-token {
-    // border: 1px solid $border-color;
-  }
+  // &.tile-type-token {
+  //   // border: 1px solid $border-color;
+  // }
 
   &.tile-type-token-transfer {
     &-short-name {
@@ -443,7 +441,7 @@ $tile-body-a-color: magenta !default;
     left: -4px;
     width: calc(100% + 5px);
     height: calc(100% + 2px);
-    background-color: #F6F7F9;
+    background-color: #3C3C3C;
     border-radius: 4px;
     overflow: hidden;
     transition: .24s ease-out;

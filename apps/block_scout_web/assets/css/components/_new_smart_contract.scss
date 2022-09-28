@@ -1,10 +1,10 @@
-$new-smart-contract-container-tooltips-background-color: #323232 !default;
+$new-smart-contract-container-tooltips-background-color: #606060 !default;
 $new-smart-contract-tooltips-width: 300px;
 $smart-contract-form-group-tooltip-color: #adb5bd !default;
 $new-smart-contract-center-column-margin-right: 30px;
 
 .new-smart-contract-container {
-  background-color: #323232;
+  background-color:#323232;
   background-image: linear-gradient(
     to bottom right,
     #{$new-smart-contract-container-tooltips-background-color} 100%,
@@ -118,7 +118,7 @@ $new-smart-contract-center-column-margin-right: 30px;
   }
 
   .smart-contract-form-group-tooltip {
-    background-color: #323232;
+    background-color: #606060;
     color: #919191;
     flex-grow: 0;
     flex-shrink: 0;
