@@ -36,7 +36,7 @@ if ($('[data-page="tokens"]').length) {
 
     const loc = window.location.pathname
 
-    if (value.length >= 3 || value === '') {
+    if (value.length >= 1 || value === '') {
       store.dispatch({ type: 'START_SEARCH' })
       store.dispatch({ type: 'START_REQUEST' })
       $.ajax({
