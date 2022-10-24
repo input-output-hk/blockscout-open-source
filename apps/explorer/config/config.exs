@@ -7,7 +7,7 @@ import Config
 
 # General application configuration
 config :explorer,
-  ecto_repos: [Explorer.Repo],
+  ecto_repos: [Explorer.Repo, Explorer.Repo.Account],
   token_functions_reader_max_retries: 3
 
 config :explorer, Explorer.Counters.AverageBlockTime,
@@ -86,6 +86,8 @@ config :explorer, Explorer.Chain.Cache.GasUsage,
   enabled: System.get_env("CACHE_ENABLE_TOTAL_GAS_USAGE_COUNTER") == "true"
 
 config :explorer, Explorer.Integrations.EctoLogger, query_time_ms_threshold: :timer.seconds(2)
+
+config :explorer, Explorer.Tags.AddressTag.Cataloger, enabled: true
 
 config :explorer, Explorer.Chain.Cache.MinMissingBlockNumber, enabled: System.get_env("DISABLE_WRITE_API") != "true"
 
