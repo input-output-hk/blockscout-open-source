@@ -332,7 +332,7 @@ $tile-body-a-color: magenta !default;
 
   /* Progress bar */
   .progress {
-    background-color: #f5f6fa;
+    background-color: #323232;
     border-radius: 2px;
     height: 4px;
     margin-top: 8px;
@@ -367,7 +367,7 @@ $tile-body-a-color: magenta !default;
 
 // Loader
 .tile-type-loading {
-  background-color: #fff;
+  background-color: #3C3C3C;
   padding-top: 30px;
   padding-bottom: 28px;
 }
@@ -377,7 +377,7 @@ $tile-body-a-color: magenta !default;
   height: 20px;
   width: 100%;
   border-radius: 4px;
-  background-color: #f5f6fa;
+  background-color: #3C3C3C;
   overflow: hidden;
   position: relative;
   &:before {
@@ -385,7 +385,7 @@ $tile-body-a-color: magenta !default;
     height: inherit;
     content: '';
     position: absolute;
-    background: linear-gradient(to right, #f5f6fa 2%, #eee 18%, #f5f6fa 33%);
+    background: linear-gradient(to right, #606060 2%, #606060 18%, #606060 33%);
     animation-duration: 1.7s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -468,7 +468,7 @@ $tile-body-a-color: magenta !default;
       left: 0;
       bottom: 0;
       width: 1px;
-      background-color: #dee2e6;
+      background-color: #323232;
     }
   }
 }
@@ -579,7 +579,7 @@ $cube-quantity: 5;
 .dark-block-loader {
   width: auto;
   height: 15px;
-  background-color: #e2e5ec;
+  background-color: #323232;
   margin-bottom: 5px;
   border-radius: 4px;
 }
