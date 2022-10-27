@@ -1,6 +1,6 @@
 // general
 $primary: #E6E6E6;
-$secondary: #f00;
+$secondary: #5c5c5c;
 $tertiary: #2d2d2d;
 $additional-font: #E6E6E6;
 
@@ -9,7 +9,7 @@ $dark3: #323232;
 
 // footer
 $footer-background-color: #323232;
-$footer-title-color: #f00;
+$footer-title-color: #5c5c5c;
 $footer-text-color: #eee;
 $footer-item-disc-color: $secondary;
 .footer-logo { filter: brightness(0) invert(1); }
@@ -91,7 +91,7 @@ $api-text-monospace-color: $primary;
 
 // Dark theme
 $dark-primary: #000;
-$dark-secondary: #f00;
+$dark-secondary: #5c5c5c;
 $dark-primary-alternate: #2d2d2d; 
 
 .dark-mode-changer {
