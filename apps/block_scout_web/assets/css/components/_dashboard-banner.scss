@@ -60,7 +60,7 @@ $dashboard-banner-chart-axis-font-color-alt: #fff;
 .dashboard-banner-chart {
   flex-grow: 1;
   margin: 15px 0 20px 0;
-  max-width: 350px;
+  max-width: 450px;
   position: relative;
   min-height: 100px;
   height: calc(100% - 86px);
@@ -128,7 +128,6 @@ $dashboard-banner-chart-axis-font-color-alt: #fff;
 
   .dashboard-banner-chart-legend-label {
     color: $dashboard-banner-chart-legend-label-color;
-    display: block;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.2;
@@ -146,7 +145,6 @@ $dashboard-banner-chart-axis-font-color-alt: #fff;
 
   .dashboard-banner-chart-legend-value {
     color: $dashboard-banner-chart-legend-value-color;
-    display: block;
     font-size: 12px;
     font-weight: normal;
     line-height: 1.2;
