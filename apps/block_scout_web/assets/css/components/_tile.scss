@@ -9,12 +9,12 @@ $tile-type-token-transfer-color: #6a39db !default;
 $tile-type-unique-token-color: #6a39db !default;
 $tile-type-unique-token-image-color: #6a39db !default;
 $tile-type-internal-transaction-color: $teal !default;
-$tile-type-api-documentation-color: $primary !default;
-$tile-type-progress-bar-color: $primary !default;
+$tile-type-api-documentation-color: #4b4b4b !default;
+$tile-type-progress-bar-color: #4b4b4b !default;
 $tile-status-error-reason: #b13f3f !default;
 $tile-status-awaiting-internal-transactions: #b13f3f !default;
 $tile-padding: 1rem;
-$tile-title-color: #fff !default;
+$tile-title-color: #4b4b4b !default;
 $tile-body-a-color: magenta !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
@@ -22,6 +22,7 @@ $tile-body-a-color: magenta !default;
     // border-left: 4px solid $color;
 
     .tile-transaction-type-block {
+      
       a {
         @if ($label-color) {
           color: $label-color;
@@ -177,6 +178,11 @@ $tile-body-a-color: magenta !default;
 
 .tile {
   background-color: #3C3C3C;
+
+  [data-selector|="block-tile-attr"] {
+    background-color: #4b4b4b !important;
+  }
+
   span[data-address-hash] {
     color: $tile-body-a-color;
   }
