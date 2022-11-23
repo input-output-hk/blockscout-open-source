@@ -3,7 +3,11 @@
 _For more information you can check out the [file](https://docs.blockscout.com/for-developers/information-and-settings/env-variables#full-env-variables-csv-file) explaining all existing blockscout env variables_
 
 ```bash
-# Blockscout uses this to determine which implementation should be used. In case of mamba, this ALWAYS must be set to 'mamba'
+# Port at which blockscout will start
+export PORT=8000
+
+# Blockscout uses this to determine which implementation should be used. In case
+# of mamba, this ALWAYS must be set to 'mamba'
 export ETHEREUM_JSONRPC_VARIANT=mamba 
 
 # Address of the json rpc service i.e. http://faucet.mamba.unzen 
@@ -17,6 +21,25 @@ export LOGO_TEXT="SIDECHAIN BLOCKEXPLORER"
 
 # Name of the subnetwork i.e. "Mamba Staging"
 export SUBNETWORK="Mamba Unzen"
+
+# Other supported chains (will appear in the dropdown)
+export SUPPORTED_CHAINS='[{
+      "title": "Mamba Staging",
+      "url": "http://explorer.mamba.unzen""
+    }]'
+
+# Normally Blockscout will display the message "Indexing Internal Transactions 
+# - We're indexing this chain right now. Some of the counts may be inaccurate."
+# until all internal transactions are indexed. For this process to be finished
+# the `debug_traceTransaction` RPC endpoint must work properly. Setting this 
+# variable to "true" will make this message disappear by force.
+export INDEXER_DISABLE_INTERNAL_TRANSACTIONS_FETCHER=true
+
+# Setting this variable will help if blockscout constantly logs errors like:
+# `2022-11-23T19:38:04.131 application=indexer fetcher=coin_balance count=14 
+# error_count=14 [error] failed to fetch: 
+# 0xa86adb7a8331d9141144ab2b51ee4d496a547449@: (3) Execution error`
+export INDEXER_DISABLE_ADDRESS_COIN_BALANCE_FETCHER=true
 ```
 
 
@@ -32,6 +55,9 @@ export SUBNETWORK="Mamba Unzen"
 - `eth_getTransactionReceipt`
 - `eth_getUncleByBlockHashAndIndex`
 - `eth_getLogs`
+- `eth_getCode`
+- `eth_subscribe`
+- `txpool_content`
 
 
 # Mamba data mappings
