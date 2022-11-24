@@ -1,3 +1,14 @@
+# General Information
+
+_For more information check out [this](https://docs.blockscout.com/for-developers/information-and-settings/untitled)_
+
+The blockscout project is split into 4 main parts:
+- `ethereum_jsonrpc` - layer responsible for communication with the JSON RPC
+- `block_scout_web` - web application
+- `explorer` - layer responsible for interacting with blockscout's database
+- `indexer `- layer responsible for fetching data from the node via ethereum_jsonrpc
+indexer spawns about 20 sub-processes which are all independent and may use different subsets of the available JSON RPC endpoints.
+
 # Environment variables
 
 _For more information you can check out the [file](https://docs.blockscout.com/for-developers/information-and-settings/env-variables#full-env-variables-csv-file) explaining all existing blockscout env variables_
