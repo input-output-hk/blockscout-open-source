@@ -529,10 +529,11 @@ defmodule EthereumJSONRPC do
            |> Blocks.requests(request)
            |> json_rpc(json_rpc_named_arguments) do
       fixed_responses = responses |> Enum.map(fn b ->
-          case b.result do
-            nil -> b
-            r   -> %{ b | result: fetch_missing_block_data(r, json_rpc_named_arguments)}
-          end
+        if Map.has_key?(b,:result) and b.result != nil do
+          %{ b | result: fetch_missing_block_data(b.result, json_rpc_named_arguments)}
+        else
+          b
+        end
         end)
       {:ok, Blocks.from_responses(fixed_responses, id_to_params)}
     end
