@@ -485,7 +485,7 @@ defmodule EthereumJSONRPC do
 
 
   defp fetch_missing_field_data("to", transaction, _, _) when not is_map_key(transaction,"to"), do: Map.put(transaction, "to", nil)
- 
+
   defp fetch_missing_field_data("v", %{"chainId" => chainIdHex, "yParity" => yParityHex} = transaction, _, _) when not is_map_key(transaction,"v") do
     chainId = quantity_to_integer(chainIdHex)
     yParityCandidate = quantity_to_integer(yParityHex)
@@ -505,7 +505,7 @@ defmodule EthereumJSONRPC do
   defp fetch_missing_field_data("gasPrice", %{"hash" => hash} = transaction, _, json_rpc_named_arguments) when not is_map_key(transaction,"gasPrice") do
     request = request(%{id: 0, method: "eth_getTransactionByHash", params: [hash, "latest"]})
     response = json_rpc(request, json_rpc_named_arguments)
-    
+
     Map.put(transaction, "gasPrice", response.results["gasPrice"])
   end
 
@@ -528,7 +528,12 @@ defmodule EthereumJSONRPC do
            id_to_params
            |> Blocks.requests(request)
            |> json_rpc(json_rpc_named_arguments) do
-      fixed_responses = responses |> Enum.map(fn b -> %{ b | result: fetch_missing_block_data(b.result, json_rpc_named_arguments)} end)
+      fixed_responses = responses |> Enum.map(fn b ->
+          case b.result do
+            nil -> b
+            r   -> %{ b | result: fetch_missing_block_data(r, json_rpc_named_arguments)}
+          end
+        end)
       {:ok, Blocks.from_responses(fixed_responses, id_to_params)}
     end
   end
