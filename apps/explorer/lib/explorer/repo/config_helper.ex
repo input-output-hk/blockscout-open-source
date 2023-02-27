@@ -42,7 +42,7 @@ defmodule Explorer.Repo.ConfigHelper do
 
   # sobelow_skip ["DOS.StringToAtom"]
   defp extract_parameters(database_url) do
-    ~r/\w*:\/\/(?<username>\w+):(?<password>[a-zA_Z0-9-*#!%^&$_]*)?@(?<hostname>(([a-zA-Z0-9_]|[a-zA-Z0-9_][a-zA-Z0-9_\-]*[a-zA-Z0-9_])\.)*([A-Za-z0-9_]|[A-Za-z0-9_][A-Za-z0-9_\-]*[A-Za-z0-9_])):(?<port>\d+)\/(?<database>[a-zA-Z0-9_-]*)/
+    ~r/\w*:\/\/(?<username>[a-zA-Z0-9_-]+):(?<password>[a-zA-Z0-9-*#!%^&$_]*)?@(?<hostname>(([a-zA-Z0-9_]|[a-zA-Z0-9_][a-zA-Z0-9_\-]*[a-zA-Z0-9_])\.)*([A-Za-z0-9_]|[A-Za-z0-9_][A-Za-z0-9_\-]*[A-Za-z0-9_])):(?<port>\d+)\/(?<database>[a-zA-Z0-9_-]*)/
     |> Regex.named_captures(database_url)
     |> Keyword.new(fn {k, v} -> {String.to_atom(k), v} end)
     |> Keyword.put(:url, database_url)
