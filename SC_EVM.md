@@ -18,10 +18,10 @@ _For more information you can check out the [file](https://docs.blockscout.com/f
 export PORT=8000
 
 # Blockscout uses this to determine which implementation should be used. In case
-# of mamba, this ALWAYS must be set to 'mamba'
-export ETHEREUM_JSONRPC_VARIANT=mamba 
+# of SC_EVM, this ALWAYS must be set to 'SC_EVM'
+export ETHEREUM_JSONRPC_VARIANT="SC_EVM"
 
-# Address of the json rpc service i.e. http://faucet.mamba.unzen 
+# Address of the json rpc service 
 export ETHEREUM_JSONRPC_HTTP_URL=http://localhost:8546
 
 # PostgreSQL connection string
@@ -30,13 +30,13 @@ export DATABASE_URL=postgresql://blockscout:blockscout@localhost:5432/blockscout
 # Logo text displayed at the top left corner of the website
 export LOGO_TEXT="SIDECHAIN BLOCKEXPLORER"
 
-# Name of the subnetwork i.e. "Mamba Staging"
-export SUBNETWORK="Mamba Unzen"
+# Name of the subnetwork i.e. "SC_EVM Staging"
+export SUBNETWORK="SC_EVM Staging"
 
 # Other supported chains (will appear in the dropdown)
 export SUPPORTED_CHAINS='[{
-      "title": "Mamba Staging",
-      "url": "http://explorer.mamba.unzen""
+      "title": "SC_EVM local",
+      "url": "http://localhost:8546"
     }]'
 
 # Normally Blockscout will display the message "Indexing Internal Transactions 
@@ -54,7 +54,7 @@ export INDEXER_DISABLE_ADDRESS_COIN_BALANCE_FETCHER=true
 ```
 
 
-# Mamba JSON-RPC endpoints used by blockscout
+# SC_EVM JSON-RPC endpoints used by blockscout
 
 - `eth_blockNumber`
 - `eth_call`
@@ -71,7 +71,7 @@ export INDEXER_DISABLE_ADDRESS_COIN_BALANCE_FETCHER=true
 - `txpool_content`
 
 
-# Mamba data mappings
+# SC_EVM data mappings
 - When calling `eth_getUncleByBlockHashAndIndex`, `eth_getBlockByHash` or `eth_getBlockByNumber`, following transformations are performed to the `Transaction` objects in the response:
   *  When field `to` is missing, `"to": null` is added to the transaction object.
   * When field `v` is missing, but `chainId` and `yParity` are present, `"v": (35 + yParity + (chainId * 2))` is added to the transaction object.
