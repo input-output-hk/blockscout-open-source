@@ -1,22 +1,27 @@
-*Describe your issue here.*
+---
+name: Issue template
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
 
-### Environment
+---
 
-* Deployment type (Manual/Docker/Docker-compose):
-* Elixir & Erlang/OTP versions (`elixir -version`):
-* Node JS version (`node -v`):
-* Operating System:
-* Blockscout Version/branch/commit:
-* Archive node type && version (Erigon/Geth/Nethermind/Ganache/?):
+🛑 Unfortunately, we must inform you that our project is no longer maintained and we are unable to address the bug you reported. However, we would like to assure you that your contribution is still valuable as it can help other users who may encounter the same issue.  
 
-### Steps to reproduce
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-*Tell us how to reproduce this issue.  ❤️ if you can push up a branch to your fork with a regression test we can run to reproduce locally.*
+**To Reproduce**
+Steps to reproduce the behavior.
 
-### Expected behaviour
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-*Tell us what should happen.*
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
+- OS: [e.g. iOS]
+- Version [e.g. 22]
 
-### Actual behaviour
-
-*Tell us what happens instead.*
+**Additional context**
+Add any other context about the problem here.
