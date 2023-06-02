@@ -80,3 +80,4 @@ export INDEXER_DISABLE_ADDRESS_COIN_BALANCE_FETCHER=true
   * When field `gasPrice` is missing and:
     - `maxFeePerGas` is not missing, `"gasPrice": maxFeePerGas` is added to the transaction object.
     - `maxFeePerGas` is missing, but `hash` is not, `eth_getTransactionByHash` is called and `"gasPrice": response["gasPrice"]` is added to the transaction object. `response` is the transaction object returned by the rpc call.
+   
