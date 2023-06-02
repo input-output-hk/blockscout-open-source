@@ -22,6 +22,8 @@ BlockScout provides a comprehensive, easy-to-use interface for users to view, co
 
 The explorer in this repository is a Blockexplorer that is configured and ready to work with the SC_EVM chain and EVM-compatible chains.
 
-## 3. Next steps.
+## 3. Next steps
 
 If you decide to investigate further, start with the [development instructions](DEVELOPMENT.md) and go from there.
+## 4. Known issues
+See the [Known issues document](KNOWN-ISSUES.md).
