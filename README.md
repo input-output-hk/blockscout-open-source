@@ -1,52 +1,37 @@
-<h1 align="center">BlockScout</h1>
-<p align="center">Blockchain Explorer for inspecting and analyzing EVM Chains.</p>
-<div align="center">
-
-[![Blockscout](https://github.com/blockscout/blockscout/workflows/Blockscout/badge.svg?branch=master)](https://github.com/blockscout/blockscout/actions)
-[![](https://dcbadge.vercel.app/api/server/blockscout?style=flat)](https://discord.gg/blockscout)
-
-</div>
+# Blockscout
 
 
-BlockScout provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM (Ethereum Virtual Machine) blockchains. This includes the POA Network, Gnosis Chain, Ethereum Classic and other **Ethereum testnets, private networks and sidechains**.
+## 1. Notice
 
-See our [project documentation](https://docs.blockscout.com/) for detailed information and setup instructions.
+As of [insert date], IOG will no longer be updating or maintaining this repo.
 
-For questions, comments and feature requests see the [discussions section](https://github.com/blockscout/blockscout/discussions).
+After three months of experimentation with the proof-of-concept EVM sidechain testnet, we have gathered valuable learnings from this experience and this innovative playground. New use cases and functionality were tested, feedback from the community was gathered, and we are now shifting our focus back to the strategic evolution of our sidechains approach.
 
-## About BlockScout
+## 2. Description
+This repo was forked from https://github.com/blockscout/blockscout, and if you wish to contribute you should make your contribution there, following the rules laid out in its Readme file.   
+### General
+BlockScout provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM (Ethereum Virtual Machine) blockchains.    
 
-BlockScout is an Elixir application that allows users to search transactions, view accounts and balances, and verify smart contracts on the Ethereum network including all forks and sidechains.
+The explorer in this repository is a Blockexplorer that is configured and ready to work with the SC_EVM chain and EVM-compatible chains. The SC_EVM chain is available to the public for education and demonstration in [this public GitHub repository](https://github.com/input-output-hk/sc-evm).
+### Modifications  
+The following changes were made to this repo for the particular use case of the SC_EVM requirements:  
+- Modifications were done on endpoint conversions from a PoW to a PoS - see [SC_EVM.md](SC_EVM.md)  
+- Some name changes such as miner to validator
+- Pruned some menu sections not relevant for this chain setup
+- Included nix flakes to build under NixOS
+- Modified color palettes.
+### Building with Nix
+Requirements:  
+[Nix](https://github.com/DeterminateSystems/nix-installer#usage)  
+The above installer is unofficial but already has flakes enabled. On other installations, ensure flakes in enabled in `nix.conf` or pass nix the flag `--extra-experimental-features 'nix-command flakes'`  
+Build:
+```
+nix build .#blockscout
+```
+The build is symlinked as `result` in the directory
 
-Currently available full-featured block explorers (Etherscan, Etherchain, Blockchair) are closed systems which are not independently verifiable.  As Ethereum sidechains continue to proliferate in both private and public settings, transparent, open-source tools are needed to analyze and validate transactions.
+## 3. Next steps
 
-## Supported Projects
-
-BlockScout supports a number of projects. Hosted instances include POA Network, Gnosis Chain, Ethereum Classic, Sokol & Kovan testnets, and other EVM chains.
-
-- [List of hosted mainnets, testnets, and additional chains using BlockScout](https://docs.blockscout.com/for-projects/supported-projects)
-- [Hosted instance versions](https://docs.blockscout.com/about/use-cases/hosted-blockscout)
-
-## Getting Started
-
-See the [project documentation](https://docs.blockscout.com/) for instructions:
-
-- [Requirements](https://docs.blockscout.com/for-developers/information-and-settings/requirements)
-- [Ansible deployment](https://docs.blockscout.com/for-developers/ansible-deployment)
-- [Manual deployment](https://docs.blockscout.com/for-developers/manual-deployment)
-- [ENV variables](https://docs.blockscout.com/for-developers/information-and-settings/env-variables)
-- [Configuration options](https://docs.blockscout.com/for-developers/configuration-options)
-
-## Acknowledgements
-
-We would like to thank the [EthPrize foundation](http://ethprize.io/) for their funding support.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and pull request protocol. We expect contributors to follow our [code of conduct](CODE_OF_CONDUCT.md) when submitting code or comments.
-
-## License
-
-[![License: GPL v3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+If you decide to investigate further, start with the [development instructions](DEVELOPMENT.md) and go from there.
+## 4. Known issues
+See the [Known issues document](KNOWN-ISSUES.md).
