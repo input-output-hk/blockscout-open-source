@@ -10,10 +10,10 @@ After three months of experimentation with the proof-of-concept EVM sidechain te
 ## 2. Description
 This repo was forked from https://github.com/blockscout/blockscout, and if you wish to contribute you should make your contribution there, following the rules laid out in its Readme file.   
 ### General
-BlockScout provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM (Ethereum Virtual Machine) blockchains.  
-### Modifications
+BlockScout provides a comprehensive, easy-to-use interface for users to view, confirm, and inspect transactions on EVM (Ethereum Virtual Machine) blockchains.    
+
 The explorer in this repository is a Blockexplorer that is configured and ready to work with the SC_EVM chain and EVM-compatible chains. The SC_EVM chain is available to the public for education and demonstration in [this public GitHub repository](https://github.com/input-output-hk/sc-evm).
-  
+### Modifications  
 The following changes were made to this repo for the particular use case of the SC_EVM requirements:  
 - Modifications were done on endpoint conversions from a PoW to a PoS - see [SC_EVM.md](SC_EVM.md)  
 - Some name changes such as miner to validator
