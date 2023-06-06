@@ -14,7 +14,7 @@ BlockScout provides a comprehensive, easy-to-use interface for users to view, co
 ### Modifications
 The explorer in this repository is a Blockexplorer that is configured and ready to work with the SC_EVM chain and EVM-compatible chains. The SC_EVM chain is available to the public for education and demonstration in [this public GitHub repository](https://github.com/input-output-hk/sc-evm).
   
-The following changes were made to this repo after the fork was taken:  
+The following changes were made to this repo for the particular use case of the SC_EVM requirements:  
 - Modifications were done on endpoint conversions from a PoW to a PoS - see [SC_EVM.md](SC_EVM.md)  
 - Some name changes such as miner to validator
 - Pruned some menu sections not relevant for this chain setup
