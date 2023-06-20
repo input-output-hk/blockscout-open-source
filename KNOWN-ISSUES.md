@@ -1,7 +1,7 @@
 # Blockscout
 ## Known Issues
 
-🛑 Unfortunately, we must inform you that our project is no longer maintained and there is no current plan to address these issues.   
+🛑 Unfortunately, we must inform you that, as of 2023, our project is no longer maintained and there is no current plan to address these issues.   
 ### Unhandled division by zero
 Synchronization throws the following error in logs:  
 indexer.block.fetcher.import throws ArithmeticError bad argument during synchronization.  

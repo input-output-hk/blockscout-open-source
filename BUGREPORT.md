@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-🛑 Unfortunately, we must inform you that our project is no longer maintained and we are unable to address the bug you reported. However, we would like to assure you that your contribution is still valuable as it can help other users who may encounter the same issue.  
+🛑 Unfortunately, we must inform you that, as of 2023, our project is no longer maintained and we are unable to address the bug you reported. However, we would like to assure you that your contribution is still valuable as it can help other users who may encounter the same issue.  
 
 **Describe the bug**
 A clear and concise description of what the bug is.
