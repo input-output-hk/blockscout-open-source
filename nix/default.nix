@@ -78,6 +78,11 @@
           };
         };
       };
+      inject = {
+        ajv-keywords."5.1.0" = [
+          ["ajv" "8.9.0"]
+        ];
+      };
     })
     .packages
     .blockscout;
