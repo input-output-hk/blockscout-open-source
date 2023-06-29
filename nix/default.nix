@@ -184,7 +184,7 @@ in
       +
       # We also need mamba in the production environment
       ''
-        cp $sourceRoot/apps/explorer/config/dev/mamba.exs $sourceRoot/apps/explorer/config/prod/mamba.exs
+        cp $sourceRoot/apps/explorer/config/dev/sc_evm.exs $sourceRoot/apps/explorer/config/prod/sc_evm.exs
       '';
 
     postBuild = ''
