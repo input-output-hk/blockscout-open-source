@@ -20,15 +20,22 @@ The following changes were made to this repo for the particular use case of the 
 - Pruned some menu sections not relevant for this chain setup
 - Included nix flakes to build under NixOS
 - Modified color palettes.
-### Building with Nix
-Requirements:  
-[Nix](https://github.com/DeterminateSystems/nix-installer#usage)  
-The above installer is unofficial but already has flakes enabled. On other installations, ensure flakes in enabled in `nix.conf` or pass nix the flag `--extra-experimental-features 'nix-command flakes'`  
-Build:
+### Building with Docker
+
+Requirements:
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [docker-compose](https://docs.docker.com/compose/)
+
+**Note.** Make sure, that [SC_EVM](https://github.com/input-output-hk/sc-evm) node has JSON RPC Client at port 8545 running.
+
+Build and start locally:
+
+```bash
+cd docker-compose
+docker-compose up --build
 ```
-nix build .#blockscout
-```
-The build is symlinked as `result` in the directory
+Blockscout UI will be available at `http://localhost:4000`
 
 ## 3. Next steps
 
