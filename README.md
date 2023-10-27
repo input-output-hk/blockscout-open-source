@@ -29,7 +29,7 @@ Requirements:
 - [Docker](https://docs.docker.com/get-docker/)
 - [docker-compose](https://docs.docker.com/compose/)
 
-**Note.** Make sure, that [SC_EVM](https://github.com/input-output-hk/sc-evm) node has JSON RPC Client at port 8545 running.
+**Note.** Make sure that [SC_EVM](https://github.com/input-output-hk/sc-evm) node has JSON RPC Client at port 8545 running.
 
 Build and start locally:
 
