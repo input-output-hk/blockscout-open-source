@@ -3,9 +3,11 @@
 
 ## 1. Notice
 
-As of 2023, IOG will no longer be updating or maintaining this repo.
+IOG will no longer be updating or maintaining this repository. 
 
-After three months of experimentation with the proof-of-concept EVM sidechain testnet, we have gathered valuable learnings from this experience and this innovative playground. New use cases and functionality were tested, feedback from the community was gathered, and we are now shifting our focus back to the strategic evolution of our sidechains approach.
+After three months of experimentation with the proof-of-concept EVM sidechain testnet, the team gathered valuable learnings from this experience and this playground. New use cases and functionality were tested, feedback from the community was gathered, and we are now continuing to develop the interoperability solutions in line with the partnerchains framework announced at the Cardano Summit 2023.
+
+All information included in this repository is considered publicly available and is free to be leveraged by developers to fork it to build and experiment with their own EVM sidechain solution. Should you have any questions, please reach out to the team on the [IOG Discord server](https://discord.com/invite/inputoutput).
 
 ## 2. Description
 This repo was forked from https://github.com/blockscout/blockscout, and if you wish to contribute you should make your contribution there, following the rules laid out in its Readme file.   
@@ -27,7 +29,7 @@ Requirements:
 - [Docker](https://docs.docker.com/get-docker/)
 - [docker-compose](https://docs.docker.com/compose/)
 
-**Note.** Make sure, that [SC_EVM](https://github.com/input-output-hk/sc-evm) node has JSON RPC Client at port 8545 running.
+**Note.** Make sure that [SC_EVM](https://github.com/input-output-hk/sc-evm) node has JSON RPC Client at port 8545 running.
 
 Build and start locally:
 
