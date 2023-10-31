@@ -2,7 +2,16 @@ $btn-line-bg: #fff !default;
 $btn-line-color: $secondary !default;
 
 .btn-line {
-  @include btn-line($btn-line-bg, $btn-line-color);
+  background-color: #606060;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 7px;
+  &:hover {
+    background-color: #181818;
+    color: #A6A6A6;
+    text-decoration: none;
+  }
 }
 
 .btn-line-inversed {

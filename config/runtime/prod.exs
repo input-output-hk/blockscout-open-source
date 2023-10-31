@@ -7,6 +7,8 @@ alias Explorer.Repo.ConfigHelper
 ### BlockScout Web ###
 ######################
 
+config :tzdata, :data_dir, System.get_env("TZ_DATA_DIR") || "/etc/elixir_tzdata_data"
+
 config :block_scout_web, BlockScoutWeb.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   check_origin: System.get_env("CHECK_ORIGIN", "false") == "true" || false,

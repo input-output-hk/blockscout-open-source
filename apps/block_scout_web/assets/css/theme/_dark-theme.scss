@@ -2,7 +2,7 @@ $body-dark: #1c1d31; // body background
 $dark-bg: #22223a; // hero shade
 $dark-light-bg: #282945; // pills bg shade
 $dark-light: #313355; // tile light top share
-$labels-dark: #8a8dba; // header nav, labels
+$labels-dark: #3c3c3c; // header nav, labels
 $dark-stakes-banned-background: #3e314c;
 
 // Switcher
@@ -23,7 +23,7 @@ $dark-stakes-banned-background: #3e314c;
 		opacity: .8;
 	}
 	svg path {
-		fill: #828ba0;
+		fill: #e6e6e6;
 	}
 	&--dark {
 		svg path {
@@ -98,7 +98,7 @@ $dark-stakes-banned-background: #3e314c;
 
 	.layout-container .dashboard-banner-container {
 		background-image: none;
-		background-color: $dark-bg !important;
+		background-color: $dark-bg;
 	}
 	.dashboard-banner-network-plain-container,
 	.dashboard-banner-network-plain-container::after {
@@ -108,33 +108,14 @@ $dark-stakes-banned-background: #3e314c;
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-label {
 		color: $labels-dark;
 	}
+	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-item:nth-child(1)::before {
+		background-color: $dark-primary;
+	}
 	.dashboard-banner-network-stats-item::before {
 		background-color: $dark-secondary;
 	}
-	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-item {
-		&.price-per-day {
-			&::before {
-			  background-color: $dark-primary;
-			}
-		  }
-	  
-		  &.gas-price-oracle {
-			&::before {
-			  background-color: $dark-primary;
-			}
-		  }
-	  
-		  &.market-cap-per-day {
-			&::before {
-			  background-color:$dark-secondary;
-			}
-		  }
-	  
-		  &.tx-per-day {
-			&::before {
-			  background-color: $dashboard-line-color-transactions;
-			}
-		  }
+	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-item:nth-child(2)::before {
+		background-color: $dark-secondary;
 	}
 
 	// main container, layout, cards
@@ -180,7 +161,7 @@ $dark-stakes-banned-background: #3e314c;
 		color: $dark-primary;
 	}
 
-	.tile, .tile-code {
+	.tile {
 		border-top-color: $dark-light;
 		border-bottom-color: $dark-light;
 		border-right-color: $dark-light;
@@ -206,7 +187,7 @@ $dark-stakes-banned-background: #3e314c;
 		color: #fff !important;
 	}
 	.tile.tile-type-block .tile-transaction-type-block a {
-		color: #fff;
+		color: #4b4b4b;
 	}
 	.fade-up-blocks-chain .tile-type-block-animation {
 		background-color: $dark-light;
@@ -309,9 +290,6 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.dropdown-item.active {
 		background-color: $dark-primary;
-	}
-	.dropdown-item.active.header,	.dropdown-item.header:hover,	.dropdown-item.header:focus {
-		background-color: $dark-light !important;
 	}
 	.btn-dropdown-line {
 		background-color: $dark-light;
@@ -437,6 +415,62 @@ $dark-stakes-banned-background: #3e314c;
 	.tooltip-pale-color.bs-tooltip-left .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="left"] .arrow::before {
 		border-left-color: rgba(#fff, 0.5) !important;
+	}
+
+	//network select
+	.network-selector-overlay {
+		background-color: rgba($dark-bg, .9);
+	}
+	.network-selector {
+		background-color: $dark-light-bg;
+	}
+	.network-selector-title {
+		color: #fff;
+	}
+	.network-selector-text {
+		color: $labels-dark;
+	}
+	.network-selector-close path {
+		fill: #fff;
+	}
+	.network-selector-search-container {
+		background-color: $dark-light;
+	}
+	.network-selector-search-container path {
+		fill: $labels-dark;
+	}
+	.network-selector-search-input {
+		color: #fff !important;
+		&::placeholder {
+			color: $labels-dark;
+		}
+	}
+	.network-selector-tab {
+		color: $labels-dark;
+		&:hover, &.active {
+			color: #fff;
+		}
+		&.active {
+			&:after {
+				background-color: $dark-primary;
+			}
+		}
+	}
+	.network-selector-item,
+	.network-selector-tabs-container {
+		border-bottom-color: darken($labels-dark, 30);
+	}
+	.network-selector-item-title {
+		color: #fff;
+	}
+	.network-selector-item-type {
+		color: $labels-dark;
+	}
+	.radio .radio-icon {
+		border-color: $labels-dark
+	}
+	.network-selector-item-url:hover .network-selector-item-type {
+		color: #fff;
 	}
 
 	//coin dropdown
@@ -1125,6 +1159,6 @@ $dark-stakes-banned-background: #3e314c;
 }
 
 .dark-theme-applied .btn-no-border-link-to-tems {
-	border-color: $dark-primary;
-	color: $dark-primary;
+	border-color: $dark-primary !important;
+	color: $dark-primary !important;
 }

@@ -6,7 +6,7 @@
 @use 'sass:math';
 
 $dashboard-line-color-price: #8286a9 !default;
-$base-border-color: #e2e5ec !default;
+$base-border-color: #d1d1d16c !default;
 $common-container-margin: 50px !default;
 
 // stylelint-disable
@@ -15,7 +15,7 @@ $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #828ba0 !default;
+$gray-500: #e6e6e6 !default;
 $gray-600: #cdcdcc !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
@@ -38,18 +38,18 @@ $grays: map-merge(
   $grays
 );
 
-$blue: #4786ff !default;
-$indigo: #5b389f !default;
-$purple: #997fdc !default;
+$blue: #2773c1 !default;
+$indigo: #6a3d9b !default;
+$purple: #6a3d9b !default;
 $pink: #e83e8c !default;
 $lilac: #b38dc9 !default;
-$red: #c74d39 !default;
-$orange: #ef9a60 !default;
+$red: #b13f3f !default;
+$orange: #3d8e9b !default;
 $yellow: #ffc107 !default;
-$green: #20b760 !default;
-$teal: #009097 !default;
-$cyan: #90e1d8 !default;
-$dark-purple: #923dc3;
+$green: #5c6e55 !default;
+$teal: #5c6e55 !default;
+$cyan: #5c6e55 !default;
+$dark-purple: #6a3d9b;
 
 $colors: () !default;
 $colors: map-merge(
@@ -263,10 +263,10 @@ $transition-cont: all 0.4s ease-in-out !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family: Nunito, "Helvetica Neue", Arial, sans-serif,
+$font-family: "Roboto", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace:
+  "Electrolize", "Courier New", monospace !default;
 $font-family-base: $font-family !default;
 // stylelint-enable value-keyword-case
 

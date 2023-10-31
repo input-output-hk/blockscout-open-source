@@ -105,11 +105,11 @@
             <%= render BlockScoutWeb.CommonComponentsView, "_loading_spinner.html", loading_text: gettext("Loading...") %>
           </button>
           <%= submit gettext("Verify & publish"), class: "btn-full-primary mr-2", "data-button-loading": "animation", "data-submit-button": "" %>
-          <%= reset gettext("Reset"), class: "btn-line mr-2 js-smart-contract-form-reset" %>
+          <%= reset gettext("Reset"), class: "btn-full-primary mr-2 js-smart-contract-form-reset" %>
           <%=
             link(
               gettext("Cancel"),
-              class: "btn-no-border",
+              class: "btn-full-primary",
               to: address_contract_path(@conn, :index, @address_hash)
               )
           %>

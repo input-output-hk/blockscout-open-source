@@ -1,5 +1,5 @@
-$btn-full-primary-bg: $primary !default;
-$btn-full-primary-color: #fff !default;
+$btn-full-primary-bg: #606060 !default;
+$btn-full-primary-color: #d2d2d2 !default;
 
 .btn-full-primary {
   @include btn-full($btn-full-primary-bg, $btn-full-primary-color);

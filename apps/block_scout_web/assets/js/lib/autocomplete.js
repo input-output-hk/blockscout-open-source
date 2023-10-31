@@ -6,7 +6,7 @@ import { appendTokenIcon } from './token_icon'
 import { escapeHtml } from './utils'
 import xss from 'xss'
 
-const placeHolder = 'Search by address, token symbol, name, transaction hash, or block number'
+const placeHolder = 'Search by address, token symbol, name, transaction hash, block number or hash'
 const dataSrc = async (query, id) => {
   try {
     // Loading placeholder text
@@ -53,11 +53,12 @@ export const searchEngine = (query, record) => {
       (record.symbol && record.symbol.toLowerCase().includes(queryLowerCase)) ||
       (record.address_hash && record.address_hash.toLowerCase().includes(queryLowerCase)) ||
       (record.tx_hash && record.tx_hash.toLowerCase().includes(queryLowerCase)) ||
-      (record.block_hash && record.block_hash.toLowerCase().includes(queryLowerCase))
+      (record.block_hash && record.block_hash.toLowerCase().includes(queryLowerCase)) ||
+      (record.block_number && record.block_number.toString().includes(queryLowerCase))
   )
   ) {
     let searchResult = '<div>'
-    searchResult += `<div>${record.address_hash || record.tx_hash || record.block_hash}</div>`
+    searchResult += `<div>${record.address_hash || record.tx_hash || (record.block_number + ": " + record.block_hash)}</div>`
 
     if (record.type === 'label') {
       searchResult += `<div class="fontawesome-icon tag"></div><span> <b>${record.name}</b></span>`

@@ -404,7 +404,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/block/overview.html.eex:53
 #, elixir-autogen, elixir-format
-msgid "Block Height"
+msgid "Block Number"
 msgstr ""
 
 #: lib/block_scout_web/templates/layout/app.html.eex:43
@@ -1161,6 +1161,21 @@ msgstr ""
 msgid "Eth RPC"
 msgstr ""
 
+#: lib/block_scout_web/templates/address/_current_coin_balance.html.eex:11
+#: lib/block_scout_web/templates/address/index.html.eex:5
+#: lib/block_scout_web/templates/address/overview.html.eex:179
+#: lib/block_scout_web/templates/block/overview.html.eex:215
+#: lib/block_scout_web/templates/internal_transaction/_tile.html.eex:24
+#: lib/block_scout_web/templates/layout/_topnav.html.eex:79
+#: lib/block_scout_web/templates/layout/app.html.eex:48
+#: lib/block_scout_web/templates/transaction/_pending_tile.html.eex:20
+#: lib/block_scout_web/templates/transaction/_tile.html.eex:43
+#: lib/block_scout_web/templates/transaction/overview.html.eex:411
+#: lib/block_scout_web/views/wei_helpers.ex:78
+#, elixir-autogen, elixir-format
+msgid "Ether"
+msgstr "FUEL"
+
 #: lib/block_scout_web/templates/api_docs/_action_tile.html.eex:211
 #: lib/block_scout_web/templates/api_docs/_eth_rpc_item.html.eex:164
 #, elixir-autogen, elixir-format
@@ -1593,7 +1608,7 @@ msgstr ""
 #: lib/block_scout_web/templates/block/overview.html.eex:98
 #: lib/block_scout_web/templates/chain/_block.html.eex:16
 #, elixir-autogen, elixir-format
-msgid "Miner"
+msgid "Validator"
 msgstr ""
 
 #: lib/block_scout_web/views/block_view.ex:61
@@ -2098,7 +2113,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_search.html.eex:3
 #, elixir-autogen, elixir-format
-msgid "Search by address, token symbol name, transaction hash, or block number"
+msgid "Search by address, token symbol name, transaction hash, block number or hash"
 msgstr ""
 
 #: lib/block_scout_web/templates/address_token_balance/_token_balances.html.eex:47
